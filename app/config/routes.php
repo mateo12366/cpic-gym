@@ -4,6 +4,12 @@ return  [
         "controller" => "App\Controller\HomeController",
         "action" => "index"
     ],
+    //Rutas login
+    "/login/init" => [
+        "controller" => "App\Controller\LoginController",
+        "action" => "initLogin"
+    ],
+
     "/home" => [
         "controller" => "App\Controller\HomeController",
         "action" => "home"
@@ -124,6 +130,96 @@ return  [
         "controller" => "App\Controller\ActividadController",
         "action" => "deleteActividad"
     ],
+
+    "/tipoUsuario/index" => [
+        "controller" => "App\Controller\TipoUsuarioController",
+        "action" => "index"
+    ],
+    "/tipoUsuario/new" => [
+        "controller" => "App\Controller\TipoUsuarioController",
+        "action" => "new"
+    ],
+    "/tipoUsuario/create" => [
+        "controller" => "App\Controller\TipoUsuarioController",
+        "action" => "create"
+    ],
+    "/tipoUsuario/view/(\d+)" => [
+        "controller" => "App\Controller\TipoUsuarioController",
+        "action" => "view"
+    ],
+    "/tipoUsuario/edit/(\d+)" => [
+        "controller" => "App\Controller\TipoUsuarioController",
+        "action" => "editTipoUsuario"
+    ],
+    "/tipoUsuario/update" => [
+        "controller" => "App\Controller\TipoUsuarioController",
+        "action" => "updateTipoUsuario"
+    ],
+    "/tipoUsuario/delete/(\d+)" => [
+        "controller" => "App\Controller\TipoUsuarioController",
+        "action" => "deleteTipoUsuario"
+    ],
+    "/grupo/index" => [
+        "controller" => "App\Controller\GrupoController",
+        "action" => "viewAll"
+    ],
+    "/grupo/new" => [
+        "controller" => "App\Controller\GrupoController",
+        "action" => "new"
+    ],
+    "/grupo/create" => [
+        "controller" => "App\Controller\GrupoController",
+        "action" => "create"
+    ],
+    "/grupo/view/(\d+)" => [
+        "controller" => "App\Controller\GrupoController",
+        "action" => "view"
+    ],
+    "/grupo/edit/(\d+)" => [
+        "controller" => "App\Controller\GrupoController",
+        "action" => "editGrupo"
+    ],
+    "/grupo/update" => [
+        "controller" => "App\Controller\GrupoController",
+        "action" => "updateGrupo"
+    ],
+    "/grupo/delete/(\d+)" => [
+        "controller" => "App\Controller\GrupoController",
+        "action" => "deleteGrupo"
+    ],
+    "/usuario/index" => [
+        "controller" => "App\Controller\UsuarioController",
+        "action" => "viewAll"
+    ],
+    "/usuario/new" => [
+        "controller" => "App\Controller\UsuarioController",
+        "action" => "new"
+    ],
+    "/usuario/create" => [
+        "controller" => "App\Controller\UsuarioController",
+        "action" => "create"
+    ],
+    "/usuario/view/(\d+)" => [
+        "controller" => "App\Controller\UsuarioController",
+        "action" => "viewOneUsuario"
+    ],
+    "/usuario/edit/(\d+)" => [
+        "controller" => "App\Controller\UsuarioController",
+        "action" => "editUsuario"
+    ],
+    "/usuario/update" => [
+        "controller" => "App\Controller\UsuarioController",
+        "action" => "updateUsuario"
+    ],
+    "/usuario/delete/(\d+)" => [
+        "controller" => "App\Controller\UsuarioController",
+        "action" => "deleteUsuario"
+    ],
+
+    
+
+
+
     
     
 ];

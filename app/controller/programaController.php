@@ -14,7 +14,7 @@ require_once MAIN_APP_ROUTE."../models/programaModel.php";
 class ProgramaController extends BaseController{
 
     public function __construct(){
-        $this->layout = "admin_layout";
+        $this->layout = "dashboard_layout";
     }
 
     public function index(){
