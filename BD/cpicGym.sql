@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-02-2025 a las 23:57:16
+-- Tiempo de generación: 17-03-2025 a las 22:47:40
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -108,6 +108,13 @@ CREATE TABLE `grupo` (
   `fkidProgramaForm` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `grupo`
+--
+
+INSERT INTO `grupo` (`id`, `ficha`, `cantApren`, `estado`, `fechaInicioLect`, `fechaFinLect`, `fkidProgramaForm`) VALUES
+(1, '4567890', 12, 'Activo', '2025-03-05', '2025-03-17', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -180,6 +187,13 @@ CREATE TABLE `tipousuariogym` (
   `nombre` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `tipousuariogym`
+--
+
+INSERT INTO `tipousuariogym` (`id`, `nombre`) VALUES
+(1, 'administrador');
+
 -- --------------------------------------------------------
 
 --
@@ -202,12 +216,19 @@ CREATE TABLE `usuario` (
   `estatura` decimal(10,0) DEFAULT NULL,
   `telefonoEmer` varchar(15) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `obsevaciones` text DEFAULT NULL,
+  `observaciones` text DEFAULT NULL,
   `fkidRol` int(10) UNSIGNED NOT NULL,
   `fkidGrupo` int(10) UNSIGNED DEFAULT NULL,
   `fkidCentroForm` int(10) UNSIGNED DEFAULT NULL,
   `fkidTipoUserGym` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nombre`, `tipoDoc`, `documento`, `fechaNac`, `email`, `genero`, `estado`, `telefono`, `eps`, `tipoSangre`, `peso`, `estatura`, `telefonoEmer`, `password`, `observaciones`, `fkidRol`, `fkidGrupo`, `fkidCentroForm`, `fkidTipoUserGym`) VALUES
+(1, 'mateo', 'CC', '12345678', '2025-03-17', 'matemart6688@gmail.com', 'M', 'Activo', '3205149751', 'nueva eps', 'O+', 63, 170, '3205149751', '$2y$10$92rjRnHbpO1FxqTBLS4LuOtwBY8c3/tH9WB/yJry.uTPXsSpGVIIS', 'fgfdgfh', 12, 1, 1, 1);
 
 --
 -- Índices para tablas volcadas
@@ -303,7 +324,7 @@ ALTER TABLE `controlprogreso`
 -- AUTO_INCREMENT de la tabla `grupo`
 --
 ALTER TABLE `grupo`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `programaformacion`
@@ -327,13 +348,13 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `tipousuariogym`
 --
 ALTER TABLE `tipousuariogym`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas

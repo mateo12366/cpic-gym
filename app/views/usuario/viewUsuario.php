@@ -7,7 +7,7 @@
                 <path d="M9 12h6"></path>
                 <path d="M12 9v6"></path>
             </svg>
-            <span>Crear Ficha</span>
+            <span>Crear Usuario</span>
         </a>
     </div>
     <div class="data-container">

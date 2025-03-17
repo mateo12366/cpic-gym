@@ -27,6 +27,7 @@
             <li><a href=""><span><i class="fas fa-tasks"></i><span class="menu-text">Actividades</span></span></a></li>
             <li><a href=""><span><i class="fas fa-sign-in-alt"></i><span class="menu-text">Registro Ingreso</span></span></a></li>
             <li><a href=""><span><i class="fas fa-chart-line"></i><span class="menu-text">Control Progreso</span></span></a></li>
+            <li><a href="/login/logout"><span><i class="fas fa-chart-line"></i><span class="menu-text">Cerra sesion (<?php echo $_SESSION['nombre'] ?>)</span></span></a></li>
           </ul>
         </nav>
       </div>

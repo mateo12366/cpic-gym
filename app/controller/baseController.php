@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-
+session_start();
 class BaseController{
 
     protected string $layout = "main_layout";

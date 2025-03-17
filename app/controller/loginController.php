@@ -24,20 +24,42 @@ class LoginController extends BaseController{
             if ($email != "" && $password != "") {
                 //Se envia a validar el login
                 $usuarioObj = new UsuarioModel();
-                $usuarioObj->validarLogin($email, $password);
-
+                $res= $usuarioObj->validarLogin($email, $password);
+                if ($res) {
+                    header("Location: /programa/index");
+                }else {
+                    $data =[
+                        "error" => "El usuario y/o contraseña son incorrectos"
+                    ];
+                }
             }else {
                 $data = [
                     "error" => "El usuario y/o contraseña no deben estar vacios"
                 ];
-                $this->render('login/login.php', $data);
+                
             }
+            $this->render('login/login.php', $data);
         
         }else {
-            echo "hdh";
             $this->render('login/login.php');
 
         }
+    }
 
+    public function logout(){
+        session_destroy();
+        header('Location: /login/init');
+    }
+
+    public function testHash(){
+        $password = "123";
+        $passwordHasehd = password_hash($password, PASSWORD_DEFAULT);
+        echo "password = $password";
+        echo "passwor Hash = $passwordHasehd";
+        if (password_verify($password, $passwordHasehd)) {
+            echo "Contraseña valida ";
+        }else {
+            echo "Contraseña incorrecta ";
+        }
     }
 }

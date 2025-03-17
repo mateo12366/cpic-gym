@@ -2,6 +2,8 @@
 
 $enviroment  = "local";
 define("MAIN_APP_ROUTE", __DIR__ . "/../app/");
+//representa el tiempo de inactividad permitido
+define("INACTIVE_TIME", 1);
 if ($enviroment == "local") {
     define("DRIVER", "mysql");
     define("HOST", "localhost");

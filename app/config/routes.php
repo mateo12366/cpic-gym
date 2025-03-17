@@ -9,6 +9,10 @@ return  [
         "controller" => "App\Controller\LoginController",
         "action" => "initLogin"
     ],
+    "/login/logout" => [
+        "controller" => "App\Controller\LoginController",
+        "action" => "logout"
+    ],
 
     "/home" => [
         "controller" => "App\Controller\HomeController",
@@ -215,6 +219,7 @@ return  [
         "controller" => "App\Controller\UsuarioController",
         "action" => "deleteUsuario"
     ],
+
 
     
 
